@@ -1,1 +1,36 @@
 # CatanIsland
+[Player]0..1-1>[Board]
+[Bank]1-1>[Board]
+[Player]<>->[Resource]
+[Board]++->[Tile]
+[Board]++->[Buildings]
+[Player]<>->[Buildings]
+[Bank]++->[Resource]
+[Bandit]1-lives on 1>[Tile]
+
+[Resource]^[Wood]
+[Resource]^[Brick]
+[Resource]^[Stone]
+[Resource]^[Wool]
+[Resource]^[Grain]
+
+[Buildings]^[Settlement]
+[Buildings]^[City]
+[Buildings]^[Road]
+
+[Tile]^[Desert]
+[Tile]^[Forest]
+[Tile]^[Pasture]
+[Tile]^[Field]
+[Tile]^[Mountain]
+[Tile]^[Hill]
+
+[Card]^[Resource]
+[Card]^[Action]
+
+[Tile]1-generates 1>[Resource]
+[Forest]1-1>[Wood]
+[Mountain]1-1>[Stone]
+[Pasture]1-1>[Wool]
+[Hill]1-1>[Brick]
+[Field]1-1>[Grain]
